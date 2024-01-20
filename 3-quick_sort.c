@@ -22,7 +22,7 @@ void change(int *array, ssize_t x1, ssize_t x2)
  *@size: size array
  *Return: return the position of the last element sorted
  */
-int lomuto_partition(int *array, ssize_t first, ssize_t last, size_t size)
+int lomuto(int *array, ssize_t first, ssize_t last, size_t size)
 {
 	int a = array[last];
 	ssize_t b = first, c;
