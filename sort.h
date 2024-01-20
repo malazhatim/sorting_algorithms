@@ -27,5 +27,5 @@ void quick_sort(int *array, size_t size);
 
 void change(int *array, ssize_t x1, ssize_t x2);
 int lomuto(int *array, ssize_t first, ssize_t last, size_t size);
-void qsort(int *array, ssize_t first, ssize_t last, int size);
+void quikso(int *array, ssize_t first, ssize_t last, int size);
 #endif
