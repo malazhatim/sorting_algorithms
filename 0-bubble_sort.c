@@ -8,10 +8,10 @@
  */
 void bubble_sort(int *array, size_t size)
 {
-	int_t i, j;
+	size_t i, j;
 	int swp;
 
-	if (!arry || !size)
+	if (!array || !size)
 		return;
 
 	i = 0;
