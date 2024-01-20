@@ -3,10 +3,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * struct listint_s - douply linked list
+ * @n : integer
+ * @prev : prev elrment
+ * @next : poibter to next element
+ */
+typedef struct listint_s
+{
+	const int n;
+	struct listint_s *prev;
+	struct listint_s *next;
+} listint_t;
+
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 
-void integer_swap(int *x, int *y);
 
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
