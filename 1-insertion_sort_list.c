@@ -24,18 +24,26 @@ void fun_swap(listint_t *x, listint_t *y)
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *i, *j, *swap;
+	listint_t *i, *j;
 
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
-	for (i = (*list)->next; i != NULL; i = swap)
+	i = (*list)->next;
+	while (i)
 	{
-		swap = i->next;
-		j = i->prev;
-		while (j != NULL && i->n < j->n)
+		j = i;
+		i = i->next;
+		while (j && j->prev)
 		{
-			fun_swap(list, &j, i);
-			print_list((const listint_t *)*list);
+			if (j->prev->n > j->n)
+			{
+				fun_swap(j->prev, j);
+				if (!j->prev)
+					*list = j;
+				print_list((const listint_t *)*list);
+			}
+			else
+				j = j->prev;
 		}
 	}
 }
